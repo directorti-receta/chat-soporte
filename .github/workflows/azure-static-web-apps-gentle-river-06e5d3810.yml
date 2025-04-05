@@ -41,10 +41,12 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_GENTLE_RIVER_06E5D3810 }}
           action: "upload"
-          app_location: "/"               # Ruta al index.html
-          api_location: ""                # No tienes API
-          output_location: "."            # El contenido ya está en la raíz
+          app_location: "/" # App source code path
+          api_location: "" # No tienes backend
+          output_location: "" # HTML estático, sin build
+          skip_app_build: true
           github_id_token: ${{ steps.idtoken.outputs.result }}
+
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
