@@ -2,10 +2,47 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <title>Chat Soporte</title>
+    <title>Chat de Soporte - La Receta</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+      }
+      .container {
+        max-width: 500px;
+        background: white;
+        padding: 40px 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      }
+      h1 {
+        font-size: 26px;
+        margin-bottom: 15px;
+        color: #222;
+      }
+      p {
+        font-size: 17px;
+        color: #555;
+      }
+    </style>
   </head>
   <body>
-    <h2>Bienvenido al chat de soporte</h2>
+    <div class="container">
+      <h1>¡Bienvenido al nuevo Chat de Soporte!</h1>
+      <p>
+        Este canal está integrado con Microsoft Teams.<br />
+        Para iniciar una conversación con uno de nuestros asesores,<br />
+        haz clic en el ícono de chat ubicado en la esquina inferior derecha.
+      </p>
+    </div>
 
     <!-- Script de B2Chat -->
     <script id="b2chat-livechat" src="https://app.b2chat.io/live/livechat_launcher.js" defer async></script>
