@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <title>Chat Soporte - La Receta</title>
-</head>
-<body>
-  <h2 style="text-align:center;">Chat de soporte - La Receta</h2>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chat Soporte</title>
+  </head>
+  <body>
+    <h2>Bienvenido al chat de soporte</h2>
 
-  <!-- Script del chat de B2Chat -->
-  <script id="b2chat-livechat"
-          src="https://app.b2chat.io/live/livechat_launcher.js"
-          defer async></script>
-  <script>
-    function b2chat_livechat_setup(B2Chat) {
-      B2Chat.init({
-        token: "d59e97b2-4084-44cf-b3a1-07a67ac5bc47"
-      });
-    }
-  </script>
-</body>
+    <script id="b2chat-livechat" src="https://app.b2chat.io/live/livechat_launcher.js" defer async></script>
+    <script>
+      function b2chat_livechat_setup(B2Chat) {
+        B2Chat.init({
+          token: "d59e97b2-4084-44cf-b3a1-07a67ac5bc47"
+        });
+      }
+    </script>
+  </body>
 </html>
