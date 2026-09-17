@@ -1,70 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Soporte TI - La Receta</title>
-  <style>
-    *{box-sizing:border-box}
-    body{
-      margin:0;font-family:Roboto,Arial,sans-serif;background:#f4f6f8;color:#222;
-      min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px
-    }
-    .card{
-      width:min(680px,100%);background:#fff;border-radius:18px;padding:38px;
-      box-shadow:0 12px 35px rgba(0,0,0,.10);text-align:center
-    }
-    .logo{width:76px;height:76px;object-fit:contain;margin-bottom:12px}
-    h1{margin:0 0 10px;font-size:30px}
-    p{font-size:17px;line-height:1.55;color:#555}
-    .steps{text-align:left;background:#fafafa;border-radius:14px;padding:18px 22px;margin:24px 0}
-    .steps p{margin:8px 0;font-size:15px}
-    button,a.btn{
-      display:inline-block;border:0;border-radius:10px;padding:14px 22px;margin:7px;
-      font-size:16px;font-weight:700;cursor:pointer;text-decoration:none
-    }
-    .primary{background:#ed1b2f;color:white}
-    .secondary{background:#eceff3;color:#222}
-    .status{margin-top:18px;font-size:14px;color:#666}
-  </style>
-</head>
-<body>
-  <main class="card">
-    <img src="favicon.png" alt="La Receta" class="logo">
-    <h1>Soporte TI - La Receta</h1>
-    <p>Para ingresar a Calisof desde Microsoft Teams, primero inicia sesión con tu cuenta corporativa. 
-    Después vuelve a esta ventana y abre Calisof.</p>
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Soporte TI - La Receta</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f5f6f8;color:#222}
+main{max-width:1050px;margin:auto;padding:30px 20px 60px}.hero,.guide{background:#fff;border-radius:20px;padding:32px;box-shadow:0 10px 30px #00000010}
+.brand{text-align:center}.flame{font-size:42px}.brand h1{margin:8px 0}.lead{text-align:center;color:#555;max-width:760px;margin:10px auto 22px;line-height:1.5}
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}.btn{border:0;border-radius:10px;padding:14px 22px;font-weight:700;cursor:pointer;text-decoration:none;display:inline-block}
+.primary{background:#ed1b2f;color:#fff}.secondary{background:#eceff3;color:#202124}.note{text-align:center;color:#666;font-size:14px;margin-top:15px}
+.guide{margin-top:24px}.guide h2{text-align:center;margin-top:0}.intro{text-align:center;color:#555}.step{margin:28px 0;padding-top:4px}
+.step h3{margin-bottom:8px}.num{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#ed1b2f;color:#fff;margin-right:8px}
+.step p,.step li{line-height:1.55;color:#444}.shot{width:100%;border:1px solid #ddd;border-radius:12px;margin-top:12px}
+.tip{background:#fff4f5;border-left:5px solid #ed1b2f;padding:16px 18px;border-radius:8px;margin-top:25px}
+.small{font-size:14px;color:#666}@media(max-width:650px){.hero,.guide{padding:22px}.step{margin:22px 0}}
+</style></head>
+<body><main>
+<section class="hero">
+<div class="brand"><div class="flame">🔥</div><h1>Soporte TI - La Receta</h1></div>
+<p class="lead">Desde aquí puedes ingresar a Calisof y registrar tus solicitudes de soporte tecnológico. Calisof se abrirá en una ventana independiente para garantizar el correcto funcionamiento del inicio de sesión.</p>
+<div class="actions">
+<a class="btn primary" target="_blank" rel="noopener" href="https://launcher.myapps.microsoft.com/api/signin/204ca7e1-2047-4418-b5ac-ba23ccc2782f?tenantId=aa056df3-9c37-4999-932c-a9303e16ce5f">Iniciar sesión en Calisof</a>
+<a class="btn secondary" target="_blank" rel="noopener" href="https://calisof.com:605/Home/Index">Abrir Calisof</a>
+</div>
+<p class="note">Primero inicia sesión con tu cuenta corporativa de Microsoft 365 y luego abre Calisof.</p>
+</section>
 
-    <div class="steps">
-      <p><strong>1.</strong> Haz clic en <b>Iniciar sesión en Calisof</b>.</p>
-      <p><strong>2.</strong> Completa el inicio de sesión de Microsoft si es solicitado.</p>
-      <p><strong>3.</strong> Regresa a Teams y pulsa <b>Abrir Calisof</b>.</p>
-    </div>
+<section class="guide">
+<h2>¿Cómo crear un ticket de soporte?</h2>
+<p class="intro">Sigue estos pasos para registrar correctamente tu solicitud y ayudarnos a atenderla con mayor rapidez.</p>
 
-    <button class="primary" onclick="login()">Iniciar sesión en Calisof</button>
-    <button class="secondary" onclick="openCalisof()">Abrir Calisof</button>
+<div class="step"><h3><span class="num">1</span>Crea el ticket</h3>
+<p>Después de ingresar a Calisof, haz clic en el botón amarillo <b>Crear ticket</b> ubicado en la parte superior.</p>
+<img class="shot" src="paso1-crear-ticket.png" alt="Pantalla principal de Calisof con el botón Crear ticket"></div>
 
-    <div id="status" class="status">La autenticación se abrirá en una ventana independiente.</div>
-  </main>
+<div class="step"><h3><span class="num">2</span>Selecciona Incidente o Requerimiento</h3>
+<p><b>Incidente:</b> úsalo cuando algo que debería funcionar presenta una falla o interrupción, por ejemplo un error del POS, una impresora que no funciona o una falla de conexión.</p>
+<p><b>Requerimiento:</b> úsalo cuando necesitas un ajuste, acceso, configuración, instalación, creación o modificación y no necesariamente existe una falla.</p>
+<img class="shot" src="paso2-tipo-solicitud.png" alt="Selección entre Incidente y Requerimiento en Calisof"></div>
 
-<script>
-const launcherUrl = "https://launcher.myapps.microsoft.com/api/signin/204ca7e1-2047-4418-b5ac-ba23ccc2782f?tenantId=aa056df3-9c37-4999-932c-a9303e16ce5f";
-const calisofUrl = "https://calisof.com:605/Home/Index";
+<div class="step"><h3><span class="num">3</span>Identifica el servicio y el tipo de problema</h3>
+<p>Selecciona primero el sistema o servicio relacionado con tu solicitud y después el tipo de problema. Calisof puede mostrar alternativas o ayudas según tu selección. Si necesitas soporte, haz clic en <b>Montar Ticket</b>.</p>
+<img class="shot" src="paso3-seleccionar-problema.png" alt="Selección del servicio y tipo de problema en Calisof"></div>
 
-function login() {
-  const w = window.open(launcherUrl, "calisofLogin", "width=900,height=750,resizable=yes,scrollbars=yes");
-  const status = document.getElementById("status");
-  if (!w) {
-    status.textContent = "El navegador bloqueó la ventana emergente. Permite pop-ups para continuar.";
-    return;
-  }
-  status.textContent = "Completa el inicio de sesión y luego regresa a Teams.";
-}
+<div class="step"><h3><span class="num">4</span>Describe el problema y envía la solicitud</h3>
+<p>Describe claramente qué estabas intentando hacer, qué ocurrió y cualquier mensaje de error que aparezca. Si es posible, utiliza <b>Adjuntar imagen/documento</b> para incluir una captura o soporte. Finalmente haz clic en <b>Solicitar</b>.</p>
+<img class="shot" src="paso4-describir-solicitud.png" alt="Formulario para describir y solicitar el ticket"></div>
 
-function openCalisof() {
-  // Intenta mantener la navegación dentro de la pestaña de Teams.
-  window.location.href = calisofUrl;
-}
-</script>
-</body>
-</html>
+<div class="tip"><b>Ayúdanos a atenderte más rápido:</b> indica qué estabas intentando hacer, qué ocurrió, desde qué equipo o punto de venta sucede y adjunta una captura cuando exista un mensaje de error.</div>
+<p class="small">Después de crear el ticket podrás consultar su estado desde Calisof.</p>
+</section></main></body></html>
